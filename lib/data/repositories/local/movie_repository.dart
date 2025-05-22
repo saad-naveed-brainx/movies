@@ -4,7 +4,7 @@ import 'package:movies/models/movie_model.dart';
 class MovieRepository {
   static int offset = 1;
   static const int pageSize = 10;
-  Future<List<MovieModel>> getMovieSummaries() async {
+  Future<List<MovieModel>> getMovieFromApi() async {
     final response = await Dio().get(
       'https://imdb-top-100-movies.p.rapidapi.com/',
       options: Options(
